@@ -1,0 +1,3 @@
+[Unit] Description=Kali Linux AI Copilot After=network.target StartLimitIntervalSec=0
+[Service] Type=simple User=root WorkingDirectory=/root Environment="DISPLAY=:0" Environment="XAUTHORITY=/root/.Xauthority" Environment="ANTHROPIC_API_KEY=YOUR_API_KEY_HERE" ExecStart=/usr/bin/python3 /root/kali_copilot.py Restart=always RestartSec=10
+[Install] WantedBy=multi-user.target
